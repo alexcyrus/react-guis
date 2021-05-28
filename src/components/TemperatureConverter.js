@@ -24,8 +24,10 @@ class TemperatureConverter extends Component {
   }
 
   render() {
-    const celsius = this.state.scale === 'f' ? (this.state.temp - 32) * (5/9) : this.state.temp;
-    const fahrenheight = this.state.scale === 'c' ? (this.state.temp * (5/9)) + 32 : this.state.temp;
+    const scale = this.state.scale
+    const temp = this.state.temp;
+    const celsius = scale === 'f' ? (temp - 32) * (5/9) : temp;
+    const fahrenheight = scale === 'c' ? (temp * (9/5)) + 32 : temp;
     
     return (
       <div>

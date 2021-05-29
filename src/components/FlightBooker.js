@@ -14,7 +14,11 @@ function FlightBooker() {
 
   return (
     <div>
-      <Dropdown options={options} value={defaultOption} placeholder="Select an option" />
+      <Dropdown
+        options={options}
+        value={defaultOption}
+        placeholder="Select an option"
+      />
       <DatePicker
         selected = {startDate}
         onChange = {date => setStartDate(date)}

@@ -31,6 +31,7 @@ class TemperatureConverter extends Component {
     
     return (
       <div>
+        <h2>Temperature Converter</h2>
         <fieldset>
           <legend>Celsius</legend>
           <input value={celsius} onChange={this.tempC} />

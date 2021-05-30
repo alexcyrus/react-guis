@@ -45,9 +45,9 @@ const CRUD = () => {
 	return (
     <div>
       <div>
+	  	<h2>CRUD</h2>
         {editing ? (
           <Fragment>
-            <h2>Edit user</h2>
             <UpdateUserForm
               editing={editing}
               setEditing={setEditing}

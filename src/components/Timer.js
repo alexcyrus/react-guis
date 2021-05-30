@@ -19,12 +19,15 @@ function Timer() {
   }, []);
   
   return (
-    <ProgressBar
-      color={"#ff7979"}
-      width={"150px"}
-      value={value}
-      max={100}
-    />
+    <div>
+      <h2>Timer</h2>
+      <ProgressBar
+        color={"#ff7979"}
+        width={"150px"}
+        value={value}
+        max={100}
+      />
+    </div>
   );
 }
 

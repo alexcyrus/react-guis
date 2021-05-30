@@ -45,7 +45,6 @@ const CRUD = () => {
 	return (
     <div>
       <div>
-	  	<h2>CRUD</h2>
         {editing ? (
           <Fragment>
             <UpdateUserForm

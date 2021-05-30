@@ -14,7 +14,6 @@ function FlightBooker() {
 
   return (
     <div>
-      <h2>Flight Booker</h2>
       <Dropdown
         options={options}
         value={defaultOption}

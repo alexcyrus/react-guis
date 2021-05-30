@@ -20,7 +20,6 @@ function Timer() {
   
   return (
     <div>
-      <h2>Timer</h2>
       <ProgressBar
         color={"#ff7979"}
         width={"150px"}

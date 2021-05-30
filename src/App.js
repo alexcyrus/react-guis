@@ -3,6 +3,7 @@ import Counter from './components/Counter';
 import TemperatureConverter from './components/TemperatureConverter';
 import FlightBooker from './components/FlightBooker';
 import Timer from './components/Timer';
+import CRUD from './components/CRUD';
 import './App.css';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
         <TemperatureConverter />
         <FlightBooker />
         <Timer />
+        <CRUD />
       </div>
     );
   }

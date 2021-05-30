@@ -30,15 +30,16 @@ class TemperatureConverter extends Component {
     const fahrenheight = scale === 'c' ? (temp * (9/5)) + 32 : temp;
     
     return (
-      <div>
+      <div className='tempContainer'>
         <fieldset>
-          <legend>Celsius</legend>
           <input value={celsius} onChange={this.tempC} />
+          <legend>Celsius</legend>
+          <span>=</span>
         </fieldset>
 
         <fieldset>
-          <legend>Fahrenheight</legend>
           <input value={fahrenheight} onChange={this.tempF} />
+          <legend>Fahrenheight</legend>
         </fieldset>
       </div>
     );

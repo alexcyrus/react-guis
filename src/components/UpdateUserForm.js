@@ -29,7 +29,7 @@ const UpdateUserForm = props => {
       <label>Surname</label>
       <input type="text" name="surname" value={user.surname} onChange={handleInputChange} />
       <button>Update user</button>
-      <button onClick={() => props.setEditing(false)} className="button muted-button">
+      <button onClick={() => props.setEditing(false)}>
         Cancel
       </button>
     </form>

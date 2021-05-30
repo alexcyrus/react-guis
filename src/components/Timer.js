@@ -21,7 +21,7 @@ function Timer() {
   return (
     <div>
       <ProgressBar
-        color={"#ff7979"}
+        color={"#007bff"}
         width={"150px"}
         value={value}
         max={100}

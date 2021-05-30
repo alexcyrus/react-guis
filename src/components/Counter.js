@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from 'react-bootstrap/Button';
 
 class Counter extends Component {
   constructor(props) {
@@ -19,8 +20,8 @@ class Counter extends Component {
 
     return (
       <div>
-        <p>{count}</p>
-        <button onClick={this.increase}>Count</button>
+        <h2>{count}</h2>
+        <Button onClick={this.increase}>Count</Button>
       </div>
     );
   }

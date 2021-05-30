@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 const UserTable = props => (
   <table>
@@ -16,20 +17,19 @@ const UserTable = props => (
             <td>{user.name}</td>
             <td>{user.surname}</td>
             <td>
-              <button
+              <Button
                 onClick={() => {
                   props.editRow(user)
                 }}
-                className="button muted-button"
               >
                 Update
-              </button>
-              <button
+              </Button>
+              <Button
+                variant="danger"
                 onClick={() => props.deleteUser(user.id)}
-                className="button muted-button"
               >
                 Delete
-              </button>
+              </Button>
             </td>
           </tr>
         ))

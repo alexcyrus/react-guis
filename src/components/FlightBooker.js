@@ -3,6 +3,7 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import Button from 'react-bootstrap/Button';
 
 function FlightBooker() {
   const options = [
@@ -29,7 +30,7 @@ function FlightBooker() {
         onChange = {date => setEndDate(date)}
         minDate = {new Date()}
       />
-      <button>Book</button>
+      <Button>Book</Button>
     </div>
   );
 }

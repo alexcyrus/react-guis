@@ -53,13 +53,7 @@ a {
 .et-slide h1 {
   font-size: 2rem;
   margin: 0;
-  letter-spacing: 1rem;
-}
-.et-hero-tabs h3,
-.et-slide h3 {
-  font-size: 1rem;
-  letter-spacing: 0.3rem;
-  opacity: 0.6;
+  letter-spacing: 0.1rem;
 }
 
 .et-hero-tabs-container {
@@ -113,10 +107,6 @@ a {
   .et-hero-tabs h1,
 .et-slide h1 {
     font-size: 3rem;
-  }
-  .et-hero-tabs h3,
-.et-slide h3 {
-    font-size: 1rem;
   }
 
   .et-hero-tab {

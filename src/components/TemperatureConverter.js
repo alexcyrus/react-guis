@@ -34,8 +34,9 @@ class TemperatureConverter extends Component {
         <fieldset>
           <input value={celsius} onChange={this.tempC} />
           <legend>Celsius</legend>
-          <span>=</span>
         </fieldset>
+
+        <span>=</span>
 
         <fieldset>
           <input value={fahrenheight} onChange={this.tempF} />

@@ -10,7 +10,6 @@ const CRUD = () => {
 		{ id: 2, name: 'Max', surname: 'Mustermann' },
 		{ id: 3, name: 'Roman', surname: 'Tisch' },
 	]
-
 	const initialFormState = { id: null, name: '', surname: '' }
 
 	// Setting state
@@ -19,13 +18,15 @@ const CRUD = () => {
 	const [ currentUser, setCurrentUser ] = useState(initialFormState)
 	const [ editing, setEditing ] = useState(false)
 
+  // Filtering users
 	const filterUsers = (e) => {
-	const myUsers = users.filter(user => {
-	const regex = new RegExp(`^${e.target.value}`, 'gi')
-	return user.name.match(regex) || user.surname.match(regex)
-})
-setFilteredUsers(myUsers)
+	  const myUsers = users.filter(user => {
+	    const regex = new RegExp(`^${e.target.value}`, 'gi')
+	    return user.name.match(regex) || user.surname.match(regex)
+    })
+  setFilteredUsers(myUsers)
 	}
+
 	// CRUD operations
 	const addUser = user => {
 		user.id = users.length + 1
@@ -53,7 +54,6 @@ setFilteredUsers(myUsers)
 
 	return (
     <div className='crudContainer'>
-				<input type="text" placeholder="search users" onChange={filterUsers} />
       <div className='userForm'>
         {editing ? (
           <Fragment>
@@ -71,6 +71,8 @@ setFilteredUsers(myUsers)
         )}
       </div>
       <div className='userTable'>
+        <label>Filter prefix:</label>
+        <input type="text" onChange={filterUsers} />
         <UserTable filteredUsers={filteredUsers} users={users} editRow={editRow} deleteUser={deleteUser} />
       </div>
     </div>

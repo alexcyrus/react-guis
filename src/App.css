@@ -6,6 +6,10 @@ a {
   text-decoration: none;
 }
 
+label {
+  font-size: 1.25rem;
+}
+
 /* Slider Navigation */
 .et-header {
   display: flex;
@@ -120,7 +124,16 @@ a {
   display: contents;
 }
 .tempContainer span {
-  margin: 0.5rem 1rem;
+  font-size: 1.25rem;
+  margin: 0 1rem;
+}
+
+/* Flight Booker */
+.flightContainer .flightOptions {
+  margin-bottom: 1rem;
+}
+.flightContainer .bookButton button {
+  width: 100%;
 }
 
 /* Timer */
@@ -136,6 +149,12 @@ a {
   margin-bottom: 1rem;
 }
 .crudContainer .userForm label, .crudContainer .userForm input {
+  margin-right: 0.5rem;
+}
+.crudContainer .userTable {
+  float: left;
+}
+.crudContainer .userTable label, input {
   margin-right: 0.5rem;
 }
 .crudContainer .userTable button {

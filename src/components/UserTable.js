@@ -12,6 +12,7 @@ const UserTable = props => (
             <td>
               <Button
                 variant="secondary"
+                size="sm"
                 onClick={() => {
                   props.editRow(user)
                 }}
@@ -20,6 +21,7 @@ const UserTable = props => (
               </Button>
               <Button
                 variant="danger"
+                size="sm"
                 onClick={() => props.deleteUser(user.id)}
               >
                 Delete

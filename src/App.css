@@ -127,3 +127,11 @@ a {
 .tempContainer span {
   margin: 0.5rem 1rem;
 }
+
+/* Timer */
+.timerContainer .time span {
+  font-size: 2rem;
+}
+.timerContainer .button button {
+  margin: 0.25rem;
+}

@@ -3,13 +3,6 @@ import Button from 'react-bootstrap/Button';
 
 const UserTable = props => (
   <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Surname</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
     <tbody>
       {props.users.length > 0 ? (
         props.users.map(user => (
@@ -18,6 +11,7 @@ const UserTable = props => (
             <td>{user.surname}</td>
             <td>
               <Button
+                variant="secondary"
                 onClick={() => {
                   props.editRow(user)
                 }}

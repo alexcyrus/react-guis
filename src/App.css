@@ -36,7 +36,6 @@ a {
   margin-left: 1em;
   color: #000;
 }
-
 .et-hero-tabs,
 .et-slide {
   display: flex;
@@ -55,7 +54,6 @@ a {
   margin: 0;
   letter-spacing: 0.1rem;
 }
-
 .et-hero-tabs-container {
   display: flex;
   flex-direction: row;
@@ -77,7 +75,6 @@ a {
   position: fixed;
   top: 0;
 }
-
 .et-hero-tab {
   display: flex;
   justify-content: center;
@@ -93,7 +90,6 @@ a {
   background: rgba(102, 177, 241, 0.8);
   transition: all 0.5s ease;
 }
-
 .et-hero-tab-slider {
   position: absolute;
   bottom: 0;
@@ -108,7 +104,6 @@ a {
 .et-slide h1 {
     font-size: 3rem;
   }
-
   .et-hero-tab {
     font-size: 1rem;
   }
@@ -133,5 +128,16 @@ a {
   font-size: 2rem;
 }
 .timerContainer .button button {
+  margin: 0.25rem;
+}
+
+/* CRUD */
+.crudContainer .userForm {
+  margin-bottom: 1rem;
+}
+.crudContainer .userForm label, .crudContainer .userForm input {
+  margin-right: 0.5rem;
+}
+.crudContainer .userTable button {
   margin: 0.25rem;
 }

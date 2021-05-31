@@ -43,8 +43,8 @@ const CRUD = () => {
 	}
 
 	return (
-    <div>
-      <div>
+    <div className='crudContainer'>
+      <div className='userForm'>
         {editing ? (
           <Fragment>
             <UpdateUserForm
@@ -60,7 +60,7 @@ const CRUD = () => {
           </Fragment>
         )}
       </div>
-      <div>
+      <div className='userTable'>
         <UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
       </div>
     </div>

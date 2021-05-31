@@ -1,33 +1,47 @@
-import React, { useState, useEffect } from "react";
-import ProgressBar from "./Progress";
+import React from "react";
+import Button from 'react-bootstrap/Button';
 
-function Timer() {
-  const [value, setValue] = useState(0);
+const Timer = () => {
+  const [time, setTime] = React.useState(0);
+  const [timerOn, setTimerOn] = React.useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setValue(oldValue => {
-        const newValue = oldValue + 1;
+  React.useEffect(() => {
+    let interval = null;
 
-        if (newValue === 100) {
-          clearInterval(interval);
-        }
+    if (timerOn) {
+      interval = setInterval(() => {
+        setTime((prevTime) => prevTime + 10);
+      }, 10);
+    }
+    else if (!timerOn) {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [timerOn]);
 
-        return newValue;
-      });
-    }, 1000);
-  }, []);
-  
   return (
     <div>
-      <ProgressBar
-        color={"#007bff"}
-        width={"150px"}
-        value={value}
-        max={100}
-      />
+      {/* Calculate time */}
+      <div>
+        <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
+        <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
+        <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
+      </div>
+      {/* Buttons */}
+      <div>
+        {!timerOn && time === 0 && (
+          <Button onClick={() => setTimerOn(true)}>Start</Button>
+        )}
+        {timerOn && <Button variant="danger" onClick={() => setTimerOn(false)}>Stop</Button>}
+        {!timerOn && time > 0 && (
+          <Button variant="secondary" onClick={() => setTime(0)}>Reset</Button>
+        )}
+        {!timerOn && time > 0 && (
+          <Button onClick={() => setTimerOn(true)}>Resume</Button>
+        )}
+      </div>
     </div>
   );
-}
+};
 
 export default Timer;

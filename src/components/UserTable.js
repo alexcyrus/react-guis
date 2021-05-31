@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 const UserTable = props => (
   <table>
     <tbody>
-      {props.users.length > 0 ? (
-        props.users.map(user => (
+      {props.filteredUsers.length > 0 ? (
+        props.filteredUsers.map(user => (
           <tr key={user.id}>
             <td>{user.name}</td>
             <td>{user.surname}</td>

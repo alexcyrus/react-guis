@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 
 const AddUserForm = props => {
 	const initialFormState = { id: null, name: '', surname: '' }
@@ -24,7 +23,7 @@ const AddUserForm = props => {
 			<input type="text" name="name" value={user.name} onChange={handleInputChange} />
 			<label>Surname:</label>
 			<input type="text" name="surname" value={user.surname} onChange={handleInputChange} />
-			<Button>Create</Button>
+			<button className="btn btn-primary">Create</button>
 		</form>
 		</>
 	)

@@ -11,46 +11,46 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header class="et-header">
-          <div class="et-header__left">
-            <a href="" class="et-header__logo">Home</a>
+        <header className="et-header">
+          <div className="et-header__left">
+            <a href="" className="et-header__logo">Home</a>
           </div>
         </header>
 
-        <section class="et-hero-tabs">
+        <section className="et-hero-tabs">
           <h1>React GUIs</h1>
-          <div class="et-hero-tabs-container">
-            <a class="et-hero-tab" href="#tab-counter">Counter</a>
-            <a class="et-hero-tab" href="#tab-temperature-converter">Temperature Converter</a>
-            <a class="et-hero-tab" href="#tab-flight-booker">Flight Booker</a>
-            <a class="et-hero-tab" href="#tab-timer">Timer</a>
-            <a class="et-hero-tab" href="#tab-crud">CRUD</a>
-            <span class="et-hero-tab-slider"></span>
+          <div className="et-hero-tabs-container">
+            <a className="et-hero-tab" href="#tab-counter">Counter</a>
+            <a className="et-hero-tab" href="#tab-temperature-converter">Temperature Converter</a>
+            <a className="et-hero-tab" href="#tab-flight-booker">Flight Booker</a>
+            <a className="et-hero-tab" href="#tab-timer">Timer</a>
+            <a className="et-hero-tab" href="#tab-crud">CRUD</a>
+            <span className="et-hero-tab-slider"></span>
           </div>
         </section>
 
-        <main class="et-main">
-          <section class="et-slide" id="tab-counter">
+        <main className="et-main">
+          <section className="et-slide" id="tab-counter">
             <h1>Counter</h1>
             <br />
             <Counter />
           </section>
-          <section class="et-slide" id="tab-temperature-converter">
+          <section className="et-slide" id="tab-temperature-converter">
             <h1>Temperature Converter</h1>
             <br />
             <TemperatureConverter />
           </section>
-          <section class="et-slide" id="tab-flight-booker">
+          <section className="et-slide" id="tab-flight-booker">
             <h1>Flight Booker</h1>
             <br />
             <FlightBooker />
           </section>
-          <section class="et-slide" id="tab-timer">
+          <section className="et-slide" id="tab-timer">
             <h1>Timer</h1>
             <br />
             <Timer />
           </section>
-          <section class="et-slide" id="tab-crud">
+          <section className="et-slide" id="tab-crud">
             <h1>CRUD</h1>
             <br />
             <CRUD />

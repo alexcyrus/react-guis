@@ -26,8 +26,8 @@ const UpdateUserForm = props => {
       <input type="text" name="name" value={user.name} onChange={handleInputChange} />
       <label>Surname</label>
       <input type="text" name="surname" value={user.surname} onChange={handleInputChange} />
-      <button>Update user</button>
-      <button onClick={() => props.setEditing(false)}>
+      <button className="btn btn-secondary">Update user</button>
+      <button className="btn btn-danger" onClick={() => props.setEditing(false)}>
         Cancel
       </button>
     </form>

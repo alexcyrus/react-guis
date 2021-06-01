@@ -10,15 +10,17 @@ const CRUD = () => {
 		{ id: 2, name: 'Max', surname: 'Mustermann' },
 		{ id: 3, name: 'Roman', surname: 'Tisch' },
 	]
+
+  // Initial state
 	const initialFormState = { id: null, name: '', surname: '' }
 
 	// Set state
-	const [ users, setUsers ] = useState(usersData)
+	const [users, setUsers] = useState(usersData)
 	const [filteredUsers, setFilteredUsers]= useState(usersData)
-	const [ currentUser, setCurrentUser ] = useState(initialFormState)
-	const [ editing, setEditing ] = useState(false)
+	const [currentUser, setCurrentUser] = useState(initialFormState)
+	const [editing, setEditing] = useState(false)
 
-  	// Filter users
+  // Filter users
 	const filterUsers = (e) => {
 	  const myUsers = users.filter(user => {
 	    const regex = new RegExp(`^${e.target.value}`, 'gi')
@@ -41,7 +43,7 @@ const CRUD = () => {
 		setUsers(users.filter(user => user.id !== id))
 	}
 
-  // Update user
+  	// Update user
 	const updateUser = (id, updatedUser) => {
 		setEditing(false)
 		setFilteredUsers(users.map(user => (user.id === id ? updatedUser : user)))

@@ -151,6 +151,9 @@ label {
 .crudContainer .userForm label, .crudContainer .userForm input {
   margin-right: 0.5rem;
 }
+.crudContainer .userForm button {
+  margin: 0 0.25rem;
+}
 .crudContainer .userTable {
   float: left;
 }

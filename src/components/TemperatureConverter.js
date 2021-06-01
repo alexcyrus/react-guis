@@ -9,21 +9,24 @@ class TemperatureConverter extends Component {
     }
   }
 
-  tempC = (event) => {
+  // Temperature in Celsius
+  tempC = (e) => {
     this.setState({
       scale: 'c',
-      temp: event.target.value
+      temp: e.target.value
     })
   }
 
-  tempF = (event) => {
+  // Temperature in Fahrenheight
+  tempF = (e) => {
     this.setState({
       scale: 'f',
-      temp: event.target.value
+      temp: e.target.value
     })
   }
 
   render() {
+    // Calculate temperature
     const scale = this.state.scale
     const temp = this.state.temp;
     const celsius = scale === 'f' ? (temp - 32) * (5/9) : temp;

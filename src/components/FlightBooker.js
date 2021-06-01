@@ -7,20 +7,23 @@ import "react-datepicker/dist/react-datepicker.css";
 import Button from 'react-bootstrap/Button';
 
 function FlightBooker() {
+  // Flight options
   const options = [
     'one-way flight', 'return flight'
   ];
-
   const defaultOption = options[0];
+
+  // Start and End dates
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
+  // Set status
   const [status, setStatus] = useState("one-way flight")
-
   const handleSetStatus = (values) => {
     setStatus(values.value)
   }
 
+  // Confirmation message
   const handleAlert = () => {
    const formattedStartDate =  moment(startDate).format('MMMM Do YYYY');
    const formattedEndDate =  moment(endDate).format('MMMM Do YYYY');
@@ -38,7 +41,6 @@ function FlightBooker() {
         <Dropdown
           options={options}
           value={defaultOption}
-          placeholder="Select an option"
           onChange={(values) => {handleSetStatus(values)}}
         />
         <DatePicker

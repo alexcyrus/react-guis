@@ -12,7 +12,6 @@ const UpdateUserForm = props => {
 
   const handleInputChange = event => {
     const { name, value } = event.target
-
     setUser({ ...user, [name]: value })
   }
 
@@ -20,7 +19,6 @@ const UpdateUserForm = props => {
     <form
       onSubmit={event => {
         event.preventDefault()
-
         props.updateUser(user.id, user)
       }}
     >

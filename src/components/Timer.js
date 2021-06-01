@@ -5,9 +5,9 @@ const Timer = () => {
   const [time, setTime] = React.useState(0);
   const [timerOn, setTimerOn] = React.useState(false);
 
+  // Timer effect
   React.useEffect(() => {
     let interval = null;
-
     if (timerOn) {
       interval = setInterval(() => {
         setTime((prevTime) => prevTime + 10);
@@ -21,14 +21,12 @@ const Timer = () => {
 
   return (
     <div className='timerContainer'>
-      {/* Calculate time */}
       <div className='time'>
         <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
         <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
         <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
       </div>
 
-      {/* Buttons */}
       <div className='button'>
         {!timerOn && time === 0 && (
           <Button onClick={() => setTimerOn(true)}>Start</Button>
